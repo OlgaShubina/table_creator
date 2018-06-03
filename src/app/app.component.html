@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="head">
+  <h1>Table creator</h1>
+  <div class="change_format">
+    <button class="format" (click)="changeState('prev')"><img src="../assets/6.png" /></button>
+    <button class="format" (click)="changeState('next')"><img src="../assets/7.png" /></button>
+    <button class="format" style="width:10vh;"><img style="width:40%;" src="../assets/1.png" /><input value="#000000" style="float:left; width:45%" type="color" (change)="changeColor($event.target.value)" /></button>
+    <button class="format" style="width:10vh;"><img style="width:40%;" src="../assets/2.png" /><input value="#000000" style="float:left; width:45%" type="color" (change)="changeBackground($event.target.value)" /></button>
+    <button class="format" (click)="changeBold('bold')"><img src="../assets/3.png" /></button>
+    <button class="format" (click)="changeFont('italic')"><img src="../assets/4.png" /></button>
+    <button class="format" (click)="changeFont('normal');changeBold('normal')"><img src="../assets/5.png" /></button>
+  </div>
+</div>
+<div class="change_table">
+  <select (change)="createTable($event.target.value)">
+    <option disabled>Create table</option>
+    <option value="2">2 x 2</option>
+    <option value="3">3 x 3</option>
+    <option value="4">4 x 4</option>
+    <option value="4">5 x 5</option>
+  </select>
+  <button class="btn btn-default" (click)="addColumn()"><img src="../assets/table_column_add.png" />Add column</button>
+  <button class="btn btn-default" (click)="deleteColumn()"><img src="../assets/table_column_delete.png" />Remove column</button>
+  <button class="btn btn-default" (click)="addRow()"><img src="../assets/table_row_add.png" />Add row</button>
+  <button class="btn btn-default" (click)="deleteRow()"><img src="../assets/table_row_delete.png" />Remove row</button>
+</div>
+<div class="table">
+  <table border="1" cellpadding="5">
+    <tr *ngFor="let row of table_structure; let i = index">
+      <td *ngFor="let cell of row; let j = index" (click)="getIndex(i, j)"><input type="text" value={{cell_arr[cell].data}} id={{cell}} (keyup.enter)="onKey($event)"/></td>
+    </tr>
+  </table>
+</div>
+

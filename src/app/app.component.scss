@@ -1,0 +1,88 @@
+$font-stack: Bradley Hand, cursive;
+$primary-color: #334433;
+$border-color: #97bde0 ;
+
+.body {
+  background-color: #3366aa;
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+.head {
+  width: 99vw;
+  height: 12vh;
+  background-color: #84b2e0;
+  border-radius: 1vw;
+}
+button {
+  font: 120% $font-stack;
+  margin-left: 1vh;
+  width: 15vw;
+  height: 7vh;
+  float: left;
+  text-align: center;
+  background-color: transparent;
+  border-style: none;
+  padding: 1vh 0vh;
+  border-bottom-color: #aabbbb;
+  border-bottom-style: groove;
+}
+button:hover{
+  background-color:aliceblue;
+}
+.format {
+  padding: 0%;
+  width: 4vh;
+  height: 4vh;
+}
+h1 {
+  margin: 1vh 3vh;
+  font: 250% $font-stack;
+  float: left;
+}
+.change_format {
+  width: 25vw;
+  margin: 7vh 0vw; 
+  float: right;
+}
+.change_table{
+  width: 12vw;
+  margin-right: 20vw;
+
+}
+option, select {
+  @extend button;
+  background-size: 17%;
+  text-align-last: center;
+  border-bottom-width: 0.3vh;
+  appearance: none;
+  background: url("../assets/table_edit.png");
+  background-size: 10%;
+  background-position: 0.4vh center;
+  background-repeat: no-repeat;
+}
+img {
+  height: 70%;
+  float: left;
+  padding: 0%;
+  margin: 0%;
+  
+}
+.table{
+  width: auto;
+  height: auto;
+  margin-top: 3vh;
+  padding-left: 18vw;
+}
+td{
+  margin: 0%;
+  width: 10vw;
+  height: 5vh;
+  padding: 0%;
+}
+input {
+  padding: 0%;
+  margin: 0%;
+  width: 98%;
+  height: 98%;
+  font-size: 120%;
+}
