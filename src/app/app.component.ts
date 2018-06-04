@@ -35,16 +35,13 @@ export class AppComponent {
   }
 
   changeState(state: any) {
-    console.log(this.state_history)
     if (state == "prev" && this.state_history != 0) {
       this.state_history--;
-      console.log("state");
     } else if (this.state_history < this.table_history.length-1) {
       this.state_history++;
     }
     this.cell_arr = this.table_history[this.state_history][1];
     this.table_structure = this.table_history[this.state_history][0];
-    console.log(this.cell_arr, this.table_structure)
   }
 
   addColumn() {
